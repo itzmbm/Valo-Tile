@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(images/bg.png);
+  font-family: "Orbitron", sans-serif;
+  background-repeat: no-repeat;
+  color: white;
+}
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  pointer-events: none;
+}
+section {
+  margin-left: 90px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: repeat(4, 10rem);
+  grid-template-columns: repeat(4, 10rem);
+  perspective: 800px;
+  grid-gap: 3rem;
+}
+section > img {
+  width: 50px;
+  height: 100px;
+}
+.back {
+  background-color: white;
+}
+
+.face,
+.back {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.face {
+  transform: rotateY(-180deg);
+}
+.card {
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  position: relative;
+  background-color: rgba(0, 12, 17, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.toggleCard {
+  transform: rotateY(180deg);
+}
+/*adslajflkasjfld */
+.bigDiv {
+  display: flex;
+}
+
+.livesDiv {
+  margin-top: 2vh;
+  margin-left: 2vw;
+  display: flex;
+}
+.lives {
+  margin: 4px;
+}
+.scoreCount {
+  display: flex;
+  margin-left: 2vw;
+}
+#score {
+  display: inline;
+}
+.scoreDiv {
+  width: 20vw;
+  height: 30vh;
+  border-radius: 25px;
+  margin-left: 5vw;
+  background: rgba(9, 210, 224, 0.5);
+  text-align: center;
+}
+
+.gameDiv {
+  width: 50vw;
+  height: 80vh;
+  margin-left: 10vw;
+  border-radius: 25px;
+  background: rgba(9, 210, 224, 0.5);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2em;
+  grid-auto-rows: minmax(30%, 1fr);
+  padding: 1.5em;
+  display: flex;
+}
+
+.square {
+  flex: 1;
+  margin: auto;
+  background: rgba(0, 12, 17, 0.3);
+}
+.square:first-child {
+  margin-right: 20px;
+}
+
+.square > img {
+  width: 70%;
+  padding: 2em;
+  align-self: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.done {
+  pointer-events: none;
+}
+
+.gameOver {
+  pointer-events: none;
+}
+.btnDiv {
+  margin-top: 3vh;
+}
+
+.btnDiv > button {
+  width: 10vw;
+  height: 4vh;
+  border-radius: 4px;
+  background-color: rgba(61, 4, 92, 0.5);
+  border: none;
+  color: white;
+  border: 1px solid white;
+}
+.btnDiv > button:hover {
+  background-color: white;
+  color: black;
+}
+
+.flip-horizontal-top {
+  -webkit-animation: flip-horizontal-top 0.4s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: flip-horizontal-top 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    both;
+}
+
+.gameDiv {
+  grid-template-columns: repeat(2, 1fr);
+  height: 80vh;
+  width: 50vw;
+  grid-gap: 0.3em;
+  padding: 0.5em;
+  margin-left: 2vw;
+  grid-auto-rows: minmax(10%, 1fr);
+}
+.scoreDiv {
+  margin: 0;
+  font-size: 2em;
+  width: 40vw;
+}
+.square > img {
+  width: 100%;
+}
+.btnDiv > button {
+  width: 20vw;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-right: 80px;
+}
+.livesDiv {
+  margin-left: 4vw;
+}
